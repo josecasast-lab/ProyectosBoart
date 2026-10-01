@@ -1,0 +1,647 @@
+{
+ "fases": [
+  {
+   "codigo": "F1",
+   "nombre": "Estructuración de la información",
+   "objetivo": "Ordenar y validar la información de la que depende todo el sistema.",
+   "orden": 1
+  },
+  {
+   "codigo": "F2",
+   "nombre": "Diseño de la solución",
+   "objetivo": "Definir cómo se guardan los datos, cómo se ve la app y cómo actúan los flujos, antes de construir.",
+   "orden": 2
+  },
+  {
+   "codigo": "F3",
+   "nombre": "Construcción del prototipo",
+   "objetivo": "Construir y conectar SharePoint, Power Apps y Power Automate.",
+   "orden": 3
+  },
+  {
+   "codigo": "F4",
+   "nombre": "Pruebas con usuarios",
+   "objetivo": "Probar con usuarios reales en campo y corregir lo que falle.",
+   "orden": 4
+  },
+  {
+   "codigo": "F5",
+   "nombre": "Estabilización y entrega",
+   "objetivo": "Estabilizar, documentar y dejar listo el paso a la implementación formal.",
+   "orden": 5
+  }
+ ],
+ "hitos": [
+  {
+   "codigo": "H1",
+   "nombre": "Diagnóstico del entorno actual",
+   "fecha": "2026-10-09",
+   "fase": "F1",
+   "objetivo": "Saber con precisión qué existe hoy y qué hay que corregir."
+  },
+  {
+   "codigo": "H2",
+   "nombre": "Base maestra de información validada",
+   "fecha": "2026-10-23",
+   "fase": "F1",
+   "objetivo": "Trabajadores, UM, requerimientos y frecuencias definidos y aprobados: la base de toda la lógica."
+  },
+  {
+   "codigo": "H3",
+   "nombre": "Arquitectura y modelo de datos aprobados",
+   "fecha": "2026-10-30",
+   "fase": "F2",
+   "objetivo": "Cerrar el diseño antes de construir, para no rehacer listas ni pantallas."
+  },
+  {
+   "codigo": "H4",
+   "nombre": "SharePoint construido con datos reales",
+   "fecha": "2026-11-06",
+   "fase": "F3",
+   "objetivo": "Base de datos y biblioteca documental listas y pobladas con información validada."
+  },
+  {
+   "codigo": "H5",
+   "nombre": "Aplicación y automatización operativas",
+   "fecha": "2026-11-20",
+   "fase": "F3",
+   "objetivo": "Power Apps y los flujos funcionando correctamente por separado."
+  },
+  {
+   "codigo": "H6",
+   "nombre": "Prototipo integrado funcional",
+   "fecha": "2026-11-27",
+   "fase": "F3",
+   "objetivo": "Primer prototipo que funciona de extremo a extremo: registro, archivo y carpeta."
+  },
+  {
+   "codigo": "H7",
+   "nombre": "Pruebas con usuarios cerradas",
+   "fecha": "2026-12-15",
+   "fase": "F4",
+   "objetivo": "Sistema validado por usuarios reales y con las incidencias corregidas."
+  },
+  {
+   "codigo": "H8",
+   "nombre": "Sistema estable y listo para implementación",
+   "fecha": "2026-12-23",
+   "fase": "F5",
+   "objetivo": "Entorno probado, documentado y listo para su implementación formal."
+  }
+ ],
+ "actividades": [
+  {
+   "codigo": "A01",
+   "fase": "F1",
+   "hito": "H1",
+   "nombre": "Diagnóstico de listas, app y flujos actuales",
+   "detalle": "Inventario de REGISTRO_EHS, Personal_BTE y Documento (columnas, tipos, búsquedas); revisión de la app y del flujo actual; mapa de carpetas y nombres de archivo.",
+   "objetivo": "Conocer qué existe hoy, qué se reutiliza y qué debe corregirse antes de diseñar.",
+   "resp": "José Andrés Casas",
+   "inicio": "2026-10-01",
+   "fin": "2026-10-09",
+   "baseInicio": "2026-10-01",
+   "baseFin": "2026-10-09",
+   "deps": [],
+   "peso": 3,
+   "critica": true,
+   "done": false,
+   "doneAt": "",
+   "notas": "",
+   "orden": 1
+  },
+  {
+   "codigo": "A02",
+   "fase": "F1",
+   "hito": "H1",
+   "nombre": "Diagnóstico de calidad de datos de trabajadores",
+   "detalle": "DNI duplicados, trabajadores inactivos, correos, UM asignada y campos vacíos en Personal_BTE.",
+   "objetivo": "Confirmar que la lista de trabajadores puede ser la fuente única de identificación.",
+   "resp": "José Andrés Casas",
+   "inicio": "2026-10-05",
+   "fin": "2026-10-09",
+   "baseInicio": "2026-10-05",
+   "baseFin": "2026-10-09",
+   "deps": [],
+   "peso": 2,
+   "critica": false,
+   "done": false,
+   "doneAt": "",
+   "notas": "",
+   "orden": 2
+  },
+  {
+   "codigo": "A03",
+   "fase": "F1",
+   "hito": "H2",
+   "nombre": "Recolección de la matriz de requerimientos por UM",
+   "detalle": "Excel con UM, requerimientos, frecuencias, evidencia esperada, condiciones particulares y destinatario.",
+   "objetivo": "Reunir la información base de la que depende toda la lógica del sistema.",
+   "resp": "José Andrés Casas",
+   "inicio": "2026-10-01",
+   "fin": "2026-10-14",
+   "baseInicio": "2026-10-01",
+   "baseFin": "2026-10-14",
+   "deps": [],
+   "peso": 3,
+   "critica": true,
+   "done": false,
+   "doneAt": "",
+   "notas": "",
+   "orden": 3
+  },
+  {
+   "codigo": "A04",
+   "fase": "F1",
+   "hito": "H2",
+   "nombre": "Estructuración de la base maestra de trabajadores",
+   "detalle": "Depuración de registros, normalización de nombres y DNI, correo Microsoft 365, UM base y estado activo/cesado.",
+   "objetivo": "Contar con un catálogo único y confiable de trabajadores activos.",
+   "resp": "José Andrés Casas",
+   "inicio": "2026-10-12",
+   "fin": "2026-10-20",
+   "baseInicio": "2026-10-12",
+   "baseFin": "2026-10-20",
+   "deps": [
+    "A02"
+   ],
+   "peso": 3,
+   "critica": false,
+   "done": false,
+   "doneAt": "",
+   "notas": "",
+   "orden": 4
+  },
+  {
+   "codigo": "A05",
+   "fase": "F1",
+   "hito": "H2",
+   "nombre": "Estructuración de catálogos de UM y requerimientos",
+   "detalle": "Códigos únicos, nombres oficiales, nombre de carpeta por UM, tipo de evidencia por requerimiento.",
+   "objetivo": "Eliminar el texto libre y estandarizar proyectos y requerimientos.",
+   "resp": "José Andrés Casas",
+   "inicio": "2026-10-15",
+   "fin": "2026-10-19",
+   "baseInicio": "2026-10-15",
+   "baseFin": "2026-10-19",
+   "deps": [
+    "A01",
+    "A03"
+   ],
+   "peso": 2,
+   "critica": true,
+   "done": false,
+   "doneAt": "",
+   "notas": "",
+   "orden": 5
+  },
+  {
+   "codigo": "A06",
+   "fase": "F1",
+   "hito": "H2",
+   "nombre": "Matriz Proyecto × Requerimiento × Frecuencia y reglas de negocio",
+   "detalle": "Asignaciones con vigencia, definición de períodos (día, semana, quincena, mes), estados permitidos (Adjunto, Ya enviado, Por enviar, No corresponde) y validaciones.",
+   "objetivo": "Consolidar la relación entre proyectos, requerimientos y frecuencia para establecer la lógica que utilizará Power Apps.",
+   "resp": "José Andrés Casas",
+   "inicio": "2026-10-20",
+   "fin": "2026-10-22",
+   "baseInicio": "2026-10-20",
+   "baseFin": "2026-10-22",
+   "deps": [
+    "A05"
+   ],
+   "peso": 4,
+   "critica": true,
+   "done": false,
+   "doneAt": "",
+   "notas": "",
+   "orden": 6
+  },
+  {
+   "codigo": "A07",
+   "fase": "F1",
+   "hito": "H2",
+   "nombre": "Validación de la matriz con EHS",
+   "detalle": "Revisión y aprobación formal de catálogos, matriz y reglas.",
+   "objetivo": "Confirmar que las reglas reflejan las exigencias reales de cada UM.",
+   "resp": "José Andrés Casas",
+   "inicio": "2026-10-23",
+   "fin": "2026-10-23",
+   "baseInicio": "2026-10-23",
+   "baseFin": "2026-10-23",
+   "deps": [
+    "A06"
+   ],
+   "peso": 1,
+   "critica": true,
+   "done": false,
+   "doneAt": "",
+   "notas": "",
+   "orden": 7
+  },
+  {
+   "codigo": "A08",
+   "fase": "F2",
+   "hito": "H3",
+   "nombre": "Modelo de datos y estructura documental",
+   "detalle": "Listas, columnas, tipos, claves únicas e índices; biblioteca, carpetas UM / mes, nomenclatura de archivos y metadatos.",
+   "objetivo": "Definir dónde y cómo se guarda cada dato y cada documento.",
+   "resp": "José Andrés Casas",
+   "inicio": "2026-10-26",
+   "fin": "2026-10-27",
+   "baseInicio": "2026-10-26",
+   "baseFin": "2026-10-27",
+   "deps": [
+    "A07"
+   ],
+   "peso": 3,
+   "critica": true,
+   "done": false,
+   "doneAt": "",
+   "notas": "",
+   "orden": 8
+  },
+  {
+   "codigo": "A09",
+   "fase": "F2",
+   "hito": "H3",
+   "nombre": "Diseño de la experiencia en Power Apps",
+   "detalle": "Wireframes, recorrido del trabajador, mensajes de validación.",
+   "objetivo": "Que el trabajador registre su cumplimiento en pocos pasos y sin errores.",
+   "resp": "José Andrés Casas",
+   "inicio": "2026-10-26",
+   "fin": "2026-10-29",
+   "baseInicio": "2026-10-26",
+   "baseFin": "2026-10-29",
+   "deps": [
+    "A07"
+   ],
+   "peso": 2,
+   "critica": false,
+   "done": false,
+   "doneAt": "",
+   "notas": "",
+   "orden": 9
+  },
+  {
+   "codigo": "A10",
+   "fase": "F2",
+   "hito": "H3",
+   "nombre": "Diseño de los flujos de Power Automate",
+   "detalle": "Disparador, creación de carpetas, renombrado, manejo de errores y reproceso.",
+   "objetivo": "Garantizar que cada archivo llegue a su carpeta con trazabilidad, incluso si algo falla.",
+   "resp": "José Andrés Casas",
+   "inicio": "2026-10-28",
+   "fin": "2026-10-29",
+   "baseInicio": "2026-10-28",
+   "baseFin": "2026-10-29",
+   "deps": [
+    "A08"
+   ],
+   "peso": 2,
+   "critica": true,
+   "done": false,
+   "doneAt": "",
+   "notas": "",
+   "orden": 10
+  },
+  {
+   "codigo": "A11",
+   "fase": "F2",
+   "hito": "H3",
+   "nombre": "Aprobación de la arquitectura",
+   "detalle": "Validación del diseño completo antes de construir.",
+   "objetivo": "Cerrar decisiones de diseño para construir sin retrabajos.",
+   "resp": "José Andrés Casas",
+   "inicio": "2026-10-30",
+   "fin": "2026-10-30",
+   "baseInicio": "2026-10-30",
+   "baseFin": "2026-10-30",
+   "deps": [
+    "A08",
+    "A09",
+    "A10"
+   ],
+   "peso": 1,
+   "critica": true,
+   "done": false,
+   "doneAt": "",
+   "notas": "",
+   "orden": 11
+  },
+  {
+   "codigo": "A12",
+   "fase": "F3",
+   "hito": "H4",
+   "nombre": "Construcción de listas y biblioteca en SharePoint",
+   "detalle": "Catálogos, matriz, lista de registros con clave única, biblioteca con metadatos, índices y vistas de control.",
+   "objetivo": "Dejar lista la base de datos sobre la que operan la app y los flujos.",
+   "resp": "José Andrés Casas",
+   "inicio": "2026-11-02",
+   "fin": "2026-11-04",
+   "baseInicio": "2026-11-02",
+   "baseFin": "2026-11-04",
+   "deps": [
+    "A11"
+   ],
+   "peso": 4,
+   "critica": true,
+   "done": false,
+   "doneAt": "",
+   "notas": "",
+   "orden": 12
+  },
+  {
+   "codigo": "A13",
+   "fase": "F3",
+   "hito": "H4",
+   "nombre": "Carga de datos maestros",
+   "detalle": "Trabajadores, UM, requerimientos y matriz validados.",
+   "objetivo": "Poblar el sistema con información real y validada.",
+   "resp": "José Andrés Casas",
+   "inicio": "2026-11-05",
+   "fin": "2026-11-06",
+   "baseInicio": "2026-11-05",
+   "baseFin": "2026-11-06",
+   "deps": [
+    "A04",
+    "A12"
+   ],
+   "peso": 2,
+   "critica": true,
+   "done": false,
+   "doneAt": "",
+   "notas": "",
+   "orden": 13
+  },
+  {
+   "codigo": "A14",
+   "fase": "F3",
+   "hito": "H5",
+   "nombre": "Desarrollo de Power Apps",
+   "detalle": "Identificación del trabajador, requerimientos dinámicos por UM, cálculo de período, registro de estados, adjuntos e historial personal.",
+   "objetivo": "Que cada trabajador vea solo lo que le corresponde y registre su cumplimiento.",
+   "resp": "José Andrés Casas",
+   "inicio": "2026-11-09",
+   "fin": "2026-11-18",
+   "baseInicio": "2026-11-09",
+   "baseFin": "2026-11-18",
+   "deps": [
+    "A13"
+   ],
+   "peso": 5,
+   "critica": true,
+   "done": false,
+   "doneAt": "",
+   "notas": "",
+   "orden": 14
+  },
+  {
+   "codigo": "A15",
+   "fase": "F3",
+   "hito": "H5",
+   "nombre": "Desarrollo de flujos de almacenamiento",
+   "detalle": "Carpeta UM / mes automática, copia y renombrado del archivo, metadatos, actualización del registro, control de errores y reproceso.",
+   "objetivo": "Archivar cada documento de forma automática, ordenada y trazable.",
+   "resp": "José Andrés Casas",
+   "inicio": "2026-11-09",
+   "fin": "2026-11-18",
+   "baseInicio": "2026-11-09",
+   "baseFin": "2026-11-18",
+   "deps": [
+    "A13"
+   ],
+   "peso": 5,
+   "critica": true,
+   "done": false,
+   "doneAt": "",
+   "notas": "",
+   "orden": 15
+  },
+  {
+   "codigo": "A16",
+   "fase": "F3",
+   "hito": "H5",
+   "nombre": "Pruebas técnicas por componente",
+   "detalle": "Delegación, rendimiento, validaciones y fallos simulados.",
+   "objetivo": "Detectar errores de cada componente antes de integrarlos.",
+   "resp": "José Andrés Casas",
+   "inicio": "2026-11-19",
+   "fin": "2026-11-20",
+   "baseInicio": "2026-11-19",
+   "baseFin": "2026-11-20",
+   "deps": [
+    "A14",
+    "A15"
+   ],
+   "peso": 2,
+   "critica": true,
+   "done": false,
+   "doneAt": "",
+   "notas": "",
+   "orden": 16
+  },
+  {
+   "codigo": "A17",
+   "fase": "F3",
+   "hito": "H6",
+   "nombre": "Integración y pruebas de extremo a extremo",
+   "detalle": "Casos de prueba completos: registro, archivo, carpeta y enlace de retorno.",
+   "objetivo": "Comprobar que registro, archivo y carpeta quedan vinculados en todos los casos.",
+   "resp": "José Andrés Casas",
+   "inicio": "2026-11-23",
+   "fin": "2026-11-26",
+   "baseInicio": "2026-11-23",
+   "baseFin": "2026-11-26",
+   "deps": [
+    "A16"
+   ],
+   "peso": 3,
+   "critica": true,
+   "done": false,
+   "doneAt": "",
+   "notas": "",
+   "orden": 17
+  },
+  {
+   "codigo": "A18",
+   "fase": "F3",
+   "hito": "H6",
+   "nombre": "Demostración del prototipo",
+   "detalle": "Presentación a EHS y aprobación para pruebas con usuarios.",
+   "objetivo": "Validar el prototipo y autorizar las pruebas con usuarios.",
+   "resp": "José Andrés Casas",
+   "inicio": "2026-11-27",
+   "fin": "2026-11-27",
+   "baseInicio": "2026-11-27",
+   "baseFin": "2026-11-27",
+   "deps": [
+    "A17"
+   ],
+   "peso": 1,
+   "critica": true,
+   "done": false,
+   "doneAt": "",
+   "notas": "",
+   "orden": 18
+  },
+  {
+   "codigo": "A19",
+   "fase": "F4",
+   "hito": "H7",
+   "nombre": "Preparación de pruebas con usuarios",
+   "detalle": "Casos de prueba, usuarios y UM piloto, guía rápida y capacitación breve.",
+   "objetivo": "Que las pruebas cubran los escenarios reales de campo.",
+   "resp": "José Andrés Casas",
+   "inicio": "2026-11-23",
+   "fin": "2026-11-30",
+   "baseInicio": "2026-11-23",
+   "baseFin": "2026-11-30",
+   "deps": [
+    "A07"
+   ],
+   "peso": 2,
+   "critica": false,
+   "done": false,
+   "doneAt": "",
+   "notas": "",
+   "orden": 19
+  },
+  {
+   "codigo": "A20",
+   "fase": "F4",
+   "hito": "H7",
+   "nombre": "Pruebas con usuarios: ronda 1",
+   "detalle": "Uso real en UM piloto y registro de incidencias.",
+   "objetivo": "Obtener retroalimentación real e identificar errores de uso.",
+   "resp": "José Andrés Casas",
+   "inicio": "2026-12-01",
+   "fin": "2026-12-04",
+   "baseInicio": "2026-12-01",
+   "baseFin": "2026-12-04",
+   "deps": [
+    "A18",
+    "A19"
+   ],
+   "peso": 3,
+   "critica": true,
+   "done": false,
+   "doneAt": "",
+   "notas": "",
+   "orden": 20
+  },
+  {
+   "codigo": "A21",
+   "fase": "F4",
+   "hito": "H7",
+   "nombre": "Corrección de incidencias",
+   "detalle": "Ajustes en app, flujos y listas según la ronda 1.",
+   "objetivo": "Resolver las incidencias encontradas en la ronda 1.",
+   "resp": "José Andrés Casas",
+   "inicio": "2026-12-07",
+   "fin": "2026-12-11",
+   "baseInicio": "2026-12-07",
+   "baseFin": "2026-12-11",
+   "deps": [
+    "A20"
+   ],
+   "peso": 3,
+   "critica": true,
+   "done": false,
+   "doneAt": "",
+   "notas": "",
+   "orden": 21
+  },
+  {
+   "codigo": "A22",
+   "fase": "F4",
+   "hito": "H7",
+   "nombre": "Pruebas con usuarios: ronda 2 y trazabilidad",
+   "detalle": "Validación de reglas de negocio y muestreo registro ↔ archivo.",
+   "objetivo": "Confirmar que las correcciones funcionan y que cada documento es rastreable.",
+   "resp": "José Andrés Casas",
+   "inicio": "2026-12-14",
+   "fin": "2026-12-15",
+   "baseInicio": "2026-12-14",
+   "baseFin": "2026-12-15",
+   "deps": [
+    "A21"
+   ],
+   "peso": 2,
+   "critica": true,
+   "done": false,
+   "doneAt": "",
+   "notas": "",
+   "orden": 22
+  },
+  {
+   "codigo": "A23",
+   "fase": "F5",
+   "hito": "H8",
+   "nombre": "Estabilización y prueba de mantenibilidad",
+   "detalle": "Ajustes de interfaz, prueba de volumen (más de 2 000 registros), alta de un requerimiento nuevo solo desde la matriz.",
+   "objetivo": "Asegurar que el sistema soporta el volumen real y crece sin rehacer la app.",
+   "resp": "José Andrés Casas",
+   "inicio": "2026-12-16",
+   "fin": "2026-12-17",
+   "baseInicio": "2026-12-16",
+   "baseFin": "2026-12-17",
+   "deps": [
+    "A22"
+   ],
+   "peso": 2,
+   "critica": true,
+   "done": false,
+   "doneAt": "",
+   "notas": "",
+   "orden": 23
+  },
+  {
+   "codigo": "A24",
+   "fase": "F5",
+   "hito": "H8",
+   "nombre": "Documentación y procedimiento de administración",
+   "detalle": "Manual de usuario, documentación técnica, procedimiento de altas, cambios de matriz y reproceso de flujos.",
+   "objetivo": "Que el sistema pueda operarse y mantenerse sin depender de una sola persona.",
+   "resp": "José Andrés Casas",
+   "inicio": "2026-12-14",
+   "fin": "2026-12-21",
+   "baseInicio": "2026-12-14",
+   "baseFin": "2026-12-21",
+   "deps": [
+    "A17"
+   ],
+   "peso": 2,
+   "critica": false,
+   "done": false,
+   "doneAt": "",
+   "notas": "",
+   "orden": 24
+  },
+  {
+   "codigo": "A25",
+   "fase": "F5",
+   "hito": "H8",
+   "nombre": "Plan de implementación formal y cierre",
+   "detalle": "Despliegue, migración del histórico, soporte y acta de cierre de la etapa.",
+   "objetivo": "Dejar definido cómo se pasa del prototipo al uso oficial.",
+   "resp": "José Andrés Casas",
+   "inicio": "2026-12-22",
+   "fin": "2026-12-23",
+   "baseInicio": "2026-12-22",
+   "baseFin": "2026-12-23",
+   "deps": [
+    "A23",
+    "A24"
+   ],
+   "peso": 2,
+   "critica": true,
+   "done": false,
+   "doneAt": "",
+   "notas": "",
+   "orden": 25
+  }
+ ],
+ "exportado": "2026-10-01",
+ "log": []
+}
